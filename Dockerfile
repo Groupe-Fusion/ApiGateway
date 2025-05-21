@@ -1,6 +1,6 @@
 # Use the official .NET SDK image to build the app
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /FusionAPI
+WORKDIR /ApiGateway
 
 # Copy the entire solution directory into the container (including all the projects)
 COPY . .
