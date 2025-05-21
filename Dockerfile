@@ -1,14 +1,17 @@
-# Use the official .NET SDK image to build the app
+# Étape de build
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
-WORKDIR /ApiGateway
+WORKDIR /src
 
-# Copy the entire solution directory into the container (including all the projects)
+# Copier tout le code dans le conteneur
 COPY . .
 
-RUN dotnet restore
-RUN dotnet publish *.csproj -c release -o /app --no-restore
+# Restaurer les dépendances
+RUN dotnet restore ApiGateway/ApiGateway.csproj
 
-# run the app
+# Publier l'application
+RUN dotnet publish ApiGateway/ApiGateway.csproj -c Release -o /app --no-restore
+
+# Étape finale pour exécuter
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 COPY --from=build /app ./
