@@ -27,7 +27,7 @@ jobs:
             docker rm api_gateway_container || true
 
             echo "Building Docker image..."
-            docker build -t api_gateway_container .
+            docker build -t api_gateway_image .
 
             echo "Running Docker container..."
             docker run -d --name api_gateway_container -p 8079:8080 api_gateway_image
