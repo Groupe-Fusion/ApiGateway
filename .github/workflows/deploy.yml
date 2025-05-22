@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/nfs/micro-service/quick-serve/api_gateway
+            cd /home/nfs/micro-service/quick-serve/api_gateway/ApiGateway
 
             echo "Pulling latest code..."
             git pull
