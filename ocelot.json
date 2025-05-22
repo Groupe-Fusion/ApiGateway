@@ -97,7 +97,7 @@
       "UpstreamHttpMethod": [ "GET", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Localisations",
+      "DownstreamPathTemplate": "/api/localisations",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -109,7 +109,7 @@
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/Localisations/{id}",
+      "DownstreamPathTemplate": "/api/localisations/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
