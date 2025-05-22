@@ -71,6 +71,54 @@
       ],
       "UpstreamPathTemplate": "/payment/{paymentId}",
       "UpstreamHttpMethod": [ "DELETE", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Evaluation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "57.128.212.12",
+          "Port": 8084
+        }
+      ],
+      "UpstreamPathTemplate": "/evaluations",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Evaluation/{evaluationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "57.128.212.12",
+          "Port": 8084
+        }
+      ],
+      "UpstreamPathTemplate": "/evaluations/{evaluationId}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Localisations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "57.128.212.12",
+          "Port": 8085
+        }
+      ],
+      "UpstreamPathTemplate": "/localisations",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Localisations/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "57.128.212.12",
+          "Port": 8085
+        }
+      ],
+      "UpstreamPathTemplate": "/localisations/{id}",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ]
     }
   ],
   "GlobalConfiguration": {
