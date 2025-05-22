@@ -6,10 +6,10 @@ WORKDIR /app
 COPY . .
 
 # Restaurer les dépendances
-RUN dotnet restore ApiGateway.csproj
+RUN dotnet restore
 
 # Publier l'application
-RUN dotnet publish ApiGateway.csproj -c Release -o /out --no-restore
+RUN dotnet publish *.csproj -c Release -o /out --no-restore
 
 # Étape finale pour exécuter
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
