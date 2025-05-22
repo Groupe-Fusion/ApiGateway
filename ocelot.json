@@ -49,6 +49,18 @@
       "UpstreamHttpMethod": [ "DELETE", "GET" ]
     },
     {
+      "DownstreamPathTemplate": "/api/reservations/user/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "57.128.212.12",
+          "Port": 8082
+        }
+      ],
+      "UpstreamPathTemplate": "/reservations/user/{userId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/Payment",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
